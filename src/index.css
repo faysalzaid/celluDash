@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Raleway';
+}
+
+/* body */
+body.dark {
+    background-color: #222;
+}
+
+/* ======================== */
+/* ==== navigation bar ==== */
+/* ======================== */
+
+body.dark nav {
+    background-color: #222; box-shadow: rgb(255, 165, 0, 0.1) 0px 10px 10px -10px;
+}
+
+body.dark #menu-icon {
+    color: darkorange;
+}
+
+/* ================= */
+/* ====  Theme  ==== */
+/* ================= */
+#indicator.dark {
+    left: calc(100% - 30px); background-color: rgb(0, 0, 0);
+}
+
+body.dark #theme-container {
+    background-color: darkorange; box-shadow: none; border: 0.3px solid rgb(0, 0, 0);
+}
+
+body.dark .notification-icon, body.dark .settings-icon {
+    color: orange;
+}
+
+/* ======================== */
+/* ====  Notification  ==== */
+/* ======================== */
+.noti-popup {
+    display: none;
+}
+.noti-popup.show {
+    display: flex;
+}
+
+body.dark .noti-popup {
+    background-color: #333; border: 1px solid rgba(255, 255, 255, 0.459);
+}
+
+body.dark .noti-card {
+    background-color: #222;
+    color: white;
+}
+
+body.dark .noti-card:hover {
+    background-color: #111;
+}
+
+body.dark .notification-title {
+    color: orange;
+}
+
+body.dark .noti-card {
+    border: 1px solid rgba(255, 166, 0, 0.5);
+    box-shadow: none;
+}
+
+body.dark .normal-text {
+    color: orange;
+}
+
+/* ==================== */
+/* ==== Menu Links ==== */
+/* ==================== */
+.quick-links-wrapper.small {
+    display: block;
+    width: 100px;
+}
+
+.quick-links-wrapper.small .link {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-links-wrapper.small .link-icon {
+    border: none;
+    padding: 0;
+}
+
+.quick-links-wrapper.small li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.quick-links-wrapper.small li span {
+    padding: 0;
+}
+
+.link.active::before {
+    position: absolute; top: 0; left: 0; content: ''; width: 4px; height: 100%; background-color: darkorange;
+}
+
+.link.active {
+    background-color: rgb(255, 165, 0, 0.06);
+    color: darkorange;
+    font-weight: 500;
+}
+
+body.dark .link.active {
+    color: darkorange;
+    border-color: rgb(74, 222, 128);
+}
+
+body.dark .quick-links-wrapper {
+    background-color: #222;
+    color: white;
+}
+
+body.dark .link-icon {
+    border-color: gray;
+}
+
+.components-wrapper {
+    width: calc(100vw - 230px);
+}
+
+.components-wrapper.semi-wide {
+    width: calc(100vw - 100px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
