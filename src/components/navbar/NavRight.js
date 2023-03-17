@@ -5,7 +5,7 @@ import NavSettings from './NavSettings'
 
 function NavRight() {
   return (
-    <div className='flex items-center gap-4'>
+    <div className='flex items-center sm:gap-2 md:gap-4'>
     <Theme />
     <Notification />
     <NavSettings />

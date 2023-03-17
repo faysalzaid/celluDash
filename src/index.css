@@ -9,72 +9,50 @@
 }
 
 /* body */
-body.dark {
-    background-color: #222;
-}
+body.dark 
+{ background-color: #222;}
 
-/* ======================== */
 /* ==== navigation bar ==== */
-/* ======================== */
+body.dark nav { background-color: #222; box-shadow: rgb(255, 165, 0, 0.1) 0px 10px 10px -10px;}
 
-body.dark nav {
-    background-color: #222; box-shadow: rgb(255, 165, 0, 0.1) 0px 10px 10px -10px;
-}
+body.dark #menu-icon 
+{ color: darkorange;}
 
-body.dark #menu-icon {
-    color: darkorange;
-}
-
-/* ================= */
 /* ====  Theme  ==== */
-/* ================= */
-#indicator.dark {
-    left: calc(100% - 30px); background-color: rgb(0, 0, 0);
-}
+#indicator.dark 
+{ left: calc(100% - 30px); background-color: rgb(0, 0, 0);}
 
-body.dark #theme-container {
-    background-color: darkorange; box-shadow: none; border: 0.3px solid rgb(0, 0, 0);
-}
+body.dark #theme-container 
+{ background-color: darkorange; box-shadow: none; border: 0.3px solid rgb(0, 0, 0);}
 
-body.dark .notification-icon, body.dark .settings-icon {
-    color: orange;
-}
-
+body.dark .notification-icon, body.dark .settings-icon 
+{ color: orange;}
 /* ======================== */
 /* ====  Notification  ==== */
 /* ======================== */
-.noti-popup {
-    display: none;
-}
-.noti-popup.show {
-    display: flex;
-}
+.noti-popup 
+{ display: none;}
 
-body.dark .noti-popup {
-    background-color: #333; border: 1px solid rgba(255, 255, 255, 0.459);
-}
+.noti-popup.show 
+{ display: flex;}
 
-body.dark .noti-card {
-    background-color: #222;
-    color: white;
-}
+body.dark .noti-popup 
+{ background-color: #000; border: 1px solid rgba(255, 255, 255, 0.459);}
 
-body.dark .noti-card:hover {
-    background-color: #111;
-}
+body.dark .noti-card 
+{ background-color: #222;    color: white;}
 
-body.dark .notification-title {
-    color: orange;
-}
+body.dark .noti-card:hover 
+{ background-color: #111;}
 
-body.dark .noti-card {
-    border: 1px solid rgba(255, 166, 0, 0.5);
-    box-shadow: none;
-}
+body.dark .notification-title 
+{ color: orange;}
 
-body.dark .normal-text {
-    color: orange;
-}
+body.dark .noti-card 
+{  }
+
+body.dark .normal-text 
+{ color: orange;}
 
 /* ==================== */
 /* ==== Menu Links ==== */
@@ -93,12 +71,15 @@ body.dark .normal-text {
 .quick-links-wrapper.small .link-icon {
     border: none;
     padding: 0;
+    font-size: 23px;
+    /* display: none; */
 }
 
 .quick-links-wrapper.small li {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
+    font-size: 15px;
 }
 
 .quick-links-wrapper.small li span {
@@ -130,20 +111,73 @@ body.dark .link-icon {
 }
 
 .components-wrapper {
-    width: calc(100vw - 230px);
+    width: calc(100vw - 0px);
 }
 
-.components-wrapper.semi-wide {
+.components-wrapper.small {
     width: calc(100vw - 100px);
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    background: transparent;
+.table-data {
+    /* max-width: 150px; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 70px;
 
 }
 
-::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 10px;
+.count {
+    width: 35px;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(249 250 251 );
+}
+
+body.dark .table-head {
+    background-color: black;
+    color: white;
+}
+
+body.dark tr:nth-child(even) {
+    background-color: rgb(0, 0, 0, .8);
+    color: white;
+}
+
+body.dark .table-row:nth-child(odd) {
+    background-color: rgb(0,0,0, .7);
+    color: white;
+}
+
+body.dark .table-btn {
+    color: #000;
+    font-weight: 600;
+}
+
+body.dark .table-row:hover {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+table {
+    counter-reset: section;
+}
+
+.count::before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+@media screen and (min-width: 750px ) {
+    .components-wrapper {
+        width: calc(100vw - 200px);
+    }
+    
+    .components-wrapper.small {
+        width: calc(100vw - 100px);
+    }
 }

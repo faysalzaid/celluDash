@@ -53,7 +53,7 @@ const navigateToLogIn = () => {
 
 
   return (
-    <section className=' quick-links-wrapper fixed z-[2] top-[80px] lg:w-[230px] h-[calc(100vh-80px)] bg-white shadow-shadow3'>
+    <section className=' quick-links-wrapper fixed z-[2] top-[80px] w-[200px] sm:hidden lg:block  h-[calc(100vh-80px)] bg-white shadow-shadow3'>
       <ul className=' mt-[1px]'>
         <li className=' active link flex items-center relative p-6 pl-5 cursor-pointer' onClick={navigateToHomePage}>
             <CiHome className=' link-icon box-content text-2xl pr-4 border-r-[1.5px] border-black' />

@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    screens: {
+      lg: '750px',
+      md: '500px',
+      sm: '0px'
+    },
     boxShadow: {
       shadow1: 'rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 1) 0px 0px 1px 0px;',
       shadow2: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;',

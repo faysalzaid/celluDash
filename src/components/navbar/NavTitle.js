@@ -11,7 +11,7 @@ function NavTitle() {
         let links = document.querySelector('.quick-links-wrapper')
         let wrapper = document.querySelector('.components-wrapper')
         links.classList.toggle('small')
-        wrapper.classList.toggle('semi-wide')
+        wrapper.classList.toggle('small')
     }
 
     const navigateToHomePage = () => {

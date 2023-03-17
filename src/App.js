@@ -15,7 +15,7 @@ function App() {
         <NavBar />
         <QuickLinks />
     
-        <section className=' components-wrapper fixed top-[80px] right-0 h-[calc(100vh-80px)] flex z-0'>
+        <section className=' components-wrapper absolute top-[80px] right-0 h-[calc(100vh-80px)] flex'>
 
           <Routes>
             <Route path='/' element={<h1 className=' normal-text w-full h-full text-center flex items-center justify-center text-2xl'>Landing Page</h1>}/>
