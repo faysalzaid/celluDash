@@ -48,8 +48,8 @@ body.dark .noti-card:hover
 body.dark .notification-title 
 { color: orange;}
 
-body.dark .noti-card 
-{  }
+/* body.dark .noti-card 
+{  } */
 
 body.dark .normal-text 
 { color: orange;}
@@ -123,7 +123,7 @@ body.dark .link-icon {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    height: 70px;
+    height: 50px;
 
 }
 
