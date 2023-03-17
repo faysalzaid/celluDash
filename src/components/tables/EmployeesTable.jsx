@@ -1,5 +1,8 @@
 import React from 'react'
 import one from '../01.jpg'
+import { MdEdit } from 'react-icons/md'
+import { ImEye } from 'react-icons/im'
+import { BsFillTrash3Fill } from 'react-icons/bs'
 
 function EmployeesTable() {
 
@@ -18,7 +21,7 @@ function EmployeesTable() {
   }
 
   return (
-    <div className='overflow-scroll p-8 flex mt-[20px] bg-slate-100'>
+    <div className='overflow-scroll p-8 flex mt-[20px] '>
       <table className=' w-full p-3 box-content bg-gray-100 rounded-t-lg overflow-hidden rounded-b-lg shadow-shadow4'>
         <tbody className=''>
           <tr className=' table-head text-left bg-slate-300 '>
@@ -36,16 +39,16 @@ function EmployeesTable() {
                <tr key={employee.username} className=' table-row hover:bg-gray-200'>
                  <td className='count p-2 pl-5 pr-5'></td>
                  <td className=' min-w-[80px]'>
-                 <img className=' person-img w-[50px] h-[50px] m-auto rounded-lg' src={employee.img} alt='sawir' onClick={zoomImage} />
+                 <img className=' person-img w-[35px] h-[35px] m-auto rounded-full' src={employee.img} alt='sawir' onClick={zoomImage} />
                  </td>
                  <td className=' table-data-1 p-2 min-w-[120px]'>{employee.firstName}</td>
                  <td className=' table-data-1 p-2 min-w-[120px]'>{employee.lastName}</td>
                  <td className=' table-data p-2 min-w-[150px]'>{employee.position}</td>
                  <td className=' table-data p-2 min-w-[150px]'>{employee.username}</td>
-                 <td className=' h-[70px] flex items-center justify-center gap-2'>
-                   <button type='button' className='table-btn cursor-pointer w-40px bg-blue-400 hover:bg-green-500 text-sm p-[5px] pr-[7px] pl-[7px] rounded-sm'>Show</button>
-                   <button type='button' className='table-btn cursor-pointer w-40px bg-yellow-400 hover:bg-yellow-500 text-sm p-[5px] pr-[7px] pl-[7px] rounded-sm'>Edit</button>
-                   <button type='button' className='table-btn cursor-pointer w-40px bg-red-400 hover:bg-red-500 hover:text-white text-sm p-[5px] pr-[7px] pl-[7px] rounded-sm'>Delete</button>
+                 <td className=' h-[50px] flex items-center justify-start gap-2'>
+                   <button type='button' className='table-btn cursor-pointer flex items-center justify-center box-content bg-blue-400 hover:bg-green-500 p-[7px] pr-[10px] pl-[10px] rounded-sm'><ImEye /></button>
+                   <button type='button' className='table-btn cursor-pointer w-40px bg-yellow-400 hover:bg-yellow-500 p-[7px] pr-[10px] pl-[10px] rounded-sm'><MdEdit /></button>
+                   <button type='button' className='table-btn cursor-pointer w-40px bg-red-400 hover:bg-red-500 hover:text-white p-[7px] pr-[10px] pl-[10px] rounded-sm'><BsFillTrash3Fill /></button>
                  </td>
                </tr>
              )
