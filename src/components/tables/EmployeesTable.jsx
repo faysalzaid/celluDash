@@ -15,13 +15,14 @@ function EmployeesTable() {
   ]
 
   const zoomImage = () => {
-    // let personImg = document.querySelector('.person-img').src
+    let personImg = document.querySelector('.person-img')
     let zoomPopup = document.querySelector('.zoom-popup')
     zoomPopup.style.display = 'block'
+    console.log(personImg)
   }
 
   return (
-    <div className='overflow-scroll p-8 flex mt-[20px] '>
+    <div className='overflow-scroll p-8 flex '>
       <table className=' w-full p-3 box-content bg-gray-100 rounded-t-lg overflow-hidden rounded-b-lg shadow-shadow4'>
         <tbody className=''>
           <tr className=' table-head text-left bg-slate-300 '>
@@ -39,7 +40,7 @@ function EmployeesTable() {
                <tr key={employee.username} className=' table-row hover:bg-gray-200'>
                  <td className='count p-2 pl-5 pr-5'></td>
                  <td className=' min-w-[80px]'>
-                 <img className=' person-img w-[35px] h-[35px] m-auto rounded-full' src={employee.img} alt='sawir' onClick={zoomImage} />
+                 <img className=' person-img w-[35px] h-[35px] m-auto rounded-full ' src={employee.img} alt='sawir' onClick={zoomImage} />
                  </td>
                  <td className=' table-data-1 p-2 min-w-[120px]'>{employee.firstName}</td>
                  <td className=' table-data-1 p-2 min-w-[120px]'>{employee.lastName}</td>

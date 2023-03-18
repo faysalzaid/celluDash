@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Calendar from './components/calendar/Calendar';
 import Chart from './components/chart/Chart';
 import Forms from './components/form/Forms';
 import Login from './components/login/Login';
@@ -24,6 +25,7 @@ function App() {
             <Route path='/forms' element={<Forms />} />
             <Route path='/auth' element={<Login />} />
             <Route path='/messages' element={<MainNotifcation />} />
+            <Route path='/calendar' element={<Calendar />} />
           </Routes>
 
         </section>

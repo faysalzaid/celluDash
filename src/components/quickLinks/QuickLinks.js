@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiOutlineBorderlessTable, AiOutlineLineChart } from 'react-icons/ai'
 import { CiViewList, CiLogin, CiHome } from 'react-icons/ci'
+import { BsCalendarCheck } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 
 function QuickLinks() {
@@ -51,9 +52,14 @@ const navigateToLogIn = () => {
   navigate('./auth')
 }
 
+const navigateToCalendar = () => {
+  navigate('./calendar')
+}
+
 
   return (
     <section className=' quick-links-wrapper fixed z-[2] top-[80px] w-[200px] sm:hidden lg:block  h-[calc(100vh-80px)] bg-white shadow-shadow3'>
+      <p className=' p-2 pb-1 mt-3 text-gray-400'>Main</p>
       <ul className=' mt-[1px]'>
         <li className=' active link flex items-center relative p-6 pl-5 cursor-pointer' onClick={navigateToHomePage}>
             <CiHome className=' link-icon box-content text-2xl pr-4 border-r-[1.5px] border-black' />
@@ -75,9 +81,17 @@ const navigateToLogIn = () => {
             <span className='pl-3'>forms</span>
         </li>
 
+        
+        <p className=' p-2  pb-1 text-gray-400'>Extra</p>
+
         <li className=' link flex items-center relative p-6 pl-5 cursor-pointer'onClick={navigateToMessages}>
             <CiViewList className=' link-icon box-content text-2xl pr-4 border-r-[1.5px] border-black' />
             <span className='pl-3'>Messages</span>
+        </li>
+
+        <li className=' link flex items-center relative p-6 pl-5 cursor-pointer' onClick={navigateToCalendar}>
+            <BsCalendarCheck className=' link-icon box-content text-2xl pr-4 border-r-[1.5px] border-black' />
+            <span className='pl-3'>Calendar</span>
         </li>
 
         <li className=' link flex items-center relative p-6 pl-5 cursor-pointer' onClick={() => {handleLinks(); navigateToLogIn()}}>

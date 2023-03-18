@@ -9,8 +9,11 @@
 }
 
 /* body */
+body {
+    transition: all 0.3s
+}
 body.dark 
-{ background-color: #222;}
+{ background-color: #222;;}
 
 /* ==== navigation bar ==== */
 body.dark nav { background-color: #222; box-shadow: rgb(255, 165, 0, 0.1) 0px 10px 10px -10px;}
@@ -31,7 +34,7 @@ body.dark .notification-icon, body.dark .settings-icon
 /* ====  Notification  ==== */
 /* ======================== */
 .noti-popup 
-{ display: none;}
+{ display: none; transition: all 12s;}
 
 .noti-popup.show 
 { display: flex;}
@@ -57,6 +60,9 @@ body.dark .normal-text
 /* ==================== */
 /* ==== Menu Links ==== */
 /* ==================== */
+.quick-links-wrapper {
+    transition: all 0.3s;
+}
 .quick-links-wrapper.small {
     display: block;
     width: 100px;
@@ -71,7 +77,7 @@ body.dark .normal-text
 .quick-links-wrapper.small .link-icon {
     border: none;
     padding: 0;
-    font-size: 23px;
+    font-size: 20px;
     /* display: none; */
 }
 
@@ -79,7 +85,7 @@ body.dark .normal-text
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .quick-links-wrapper.small li span {
@@ -172,6 +178,57 @@ table {
     display: none;
 }
 
+
+
+
+/* Date */
+.today-display {
+    background: url(./components/05.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.today {
+    background-color: darkorange; font-weight: 600;
+}
+
+.today:hover {
+    background-color: transparent; 
+}
+
+.not-active {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lightgray;
+    cursor: default;
+}
+
+body.dark .not-active {
+    color: #717171;
+}
+
+body.dark .calendar-box {
+    background-color: #111;
+        color: white;
+        border: 1px solid darkorange;
+        border-left: none;
+}
+
+body.dark .today-display {
+    border: 1px solid darkorange;
+    border-right: none;
+}
+
+
+
+.event-popup.showEvent {
+    display: block;
+}
+
 @media screen and (min-width: 750px ) {
     .components-wrapper {
         width: calc(100vw - 200px);
@@ -179,5 +236,42 @@ table {
     
     .components-wrapper.small {
         width: calc(100vw - 100px);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .calendar-section {
+        flex-direction: column;
+        min-height: max-content;
+        box-sizing: content-box;
+        justify-content: flex-start;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .today-display {
+        width: 80%;
+        min-width: 330px;
+        border-radius: 0;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        margin: 0;
+    }
+
+    .calendar-box {
+        border-radius: 0;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        margin: 0;
+    }
+
+    body.dark .calendar-box {
+        border-top: none;
+        border-left: 1px solid darkorange;
+    }
+
+    body.dark .today-display {
+        border-right: 1px solid orange;
+        border-bottom: none;
     }
 }

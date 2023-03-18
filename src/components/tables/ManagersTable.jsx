@@ -20,7 +20,7 @@ const zoomImage = () => {
 
 function ManagersTable() {
   return (
-    <div className='overflow-scroll p-8 flex mt-[20px] pb-24'>
+    <div className='overflow-scroll p-8 flex pb-24'>
     <table className=' w-full p-3 box-content bg-gray-100 rounded-t-lg overflow-hidden rounded-b-lg shadow-shadow4'>
       <tbody>
         <tr className=' table-head text-left bg-slate-300 '>

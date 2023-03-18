@@ -15,7 +15,7 @@ module.exports = {
       shadow4: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;',
       shadow5: 'rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;',
       shadow6: 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;'
-    }
+    },
   },
   plugins: [],
 }
