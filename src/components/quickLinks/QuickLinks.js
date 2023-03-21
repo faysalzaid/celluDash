@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiOutlineBorderlessTable, AiOutlineLineChart } from 'react-icons/ai'
 import { CiViewList, CiLogin, CiHome } from 'react-icons/ci'
+import { BsGrid3X3GapFill } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 
 function QuickLinks() {
@@ -34,6 +35,12 @@ const navigateToHomePage = () => {
 const navigateToTables = () => {
   navigate('./tables')
 }
+const navigateToGrid = () => {
+  navigate('./grid')
+}
+const navigateToEditableTables = () => {
+  navigate('./edit_tables')
+}
 
 const navigateToCharts = () => {
   navigate('./charts')
@@ -63,6 +70,14 @@ const navigateToLogIn = () => {
         <li className=' link flex items-center relative p-6 pl-5 cursor-pointer' onClick={navigateToTables}>
             <AiOutlineBorderlessTable className=' link-icon box-content text-2xl pr-4 border-r-[1.5px] border-black' />
             <span className='pl-3'>Table</span>
+        </li>
+        <li className=' link flex items-center relative p-6 pl-5 cursor-pointer' onClick={navigateToGrid}>
+            <BsGrid3X3GapFill className=' link-icon box-content text-2xl pr-4 border-r-[1.5px] border-black' />
+            <span className='pl-3'>Grid View</span>
+        </li>
+        <li className=' link flex items-center relative p-6 pl-5 cursor-pointer' onClick={navigateToEditableTables}>
+            <AiOutlineBorderlessTable className=' link-icon box-content text-2xl pr-4 border-r-[1.5px] border-black' />
+            <span className='pl-3'>Editable Table</span>
         </li>
 
         <li className=' link flex items-center relative p-6 pl-5 cursor-pointer' onClick={navigateToCharts}>

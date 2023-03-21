@@ -7,6 +7,8 @@ import NavBar from './components/navbar/NavBar';
 import MainNotifcation from './components/notification/MainNotifcation';
 import QuickLinks from './components/quickLinks/QuickLinks';
 import Tables from './components/tables/Tables';
+import EditTables from './components/editTable/editTable';
+import Grid from './components/gridview/grid';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Routes>
             <Route path='/' element={<h1 className=' normal-text w-full h-full text-center flex items-center justify-center text-2xl'>Landing Page</h1>}/>
             <Route path='/tables' element={<Tables />} />
+            <Route path='/edit_tables' element={<EditTables />} />
+            <Route path='/grid' element={<Grid />} />
             <Route path='/charts' element={<Chart />} />
             <Route path='/forms' element={<Forms />} />
             <Route path='/auth' element={<Login />} />
