@@ -19,7 +19,7 @@ function Login() {
         }
 
         <div className="mt-5 flex justify-end text-sm">
-          <a href="#">Forgot password?</a>
+          <p className='cursor-pointer'>Forgot password?</p>
         </div>
 
         {
