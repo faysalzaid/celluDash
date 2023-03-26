@@ -19,7 +19,10 @@ function Login() {
         }
 
         <div className="mt-5 flex justify-end text-sm">
-          <p className='cursor-pointer'>Forgot password?</p>
+        {
+          count ?  <p className='cursor-pointer'>Forgot password?</p> : null
+        }
+         
         </div>
 
         {

@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Chart from './components/chart/Chart';
 import Forms from './components/form/Forms';
+import Chat from './components/chat/Chat';
 import Login from './components/login/Login';
 import NavBar from './components/navbar/NavBar';
 import MainNotifcation from './components/notification/MainNotifcation';
@@ -26,6 +27,7 @@ function App() {
             <Route path='/grid' element={<Grid />} />
             <Route path='/charts' element={<Chart />} />
             <Route path='/forms' element={<Forms />} />
+            <Route path='/chat' element={<Chat />} />
             <Route path='/auth' element={<Login />} />
             <Route path='/messages' element={<MainNotifcation />} />
           </Routes>
