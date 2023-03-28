@@ -66,8 +66,7 @@ export default function EditTables() {
    
       ]
     return (
-        <div className="widget-wrap">
-
+        <div className="widget-wrap w-full mx-4 mt-2">   
                 <table className='editable w-full p-3 box-content bg-gray-100 rounded-t-lg overflow-hidden rounded-b-lg shadow-shadow4'>
                     <tbody className=''>
                         <tr className=' table-head text-left bg-slate-300 '>

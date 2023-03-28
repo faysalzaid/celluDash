@@ -36,7 +36,7 @@ export default function Chat() {
   }
   return (
     <>
-      <div className="flex h-full mx-auto justify-center w-full overflow-x-hidden">
+      <div className="flex h-full mx-auto justify-center mx-4 w-full overflow-x-hidden">
         <div className="flex flex-col py-8 px-4 my-2 w-64 flex-shrink-0 dark:text-white bg-gray-100 dark:bg-zinc-800 shadow-xl rounded-lg overflow-hidden">
           <div className="flex flex-row items-center justify-center h-12 w-full">
             <div className="flex items-center justify-center rounded-2xl text-indigo-700 bg-indigo-100 h-10 w-10">
@@ -70,7 +70,7 @@ export default function Chat() {
             </div>
             <div className="text-xs text-gray-500">Lead UI/UX Designer</div>
           </div>
-          <div className="flex flex-col mt-8 overflow-auto">
+          <div className="flex flex-col mt-8 overflow-y-auto overflow-x-hidden">
             <div className="flex flex-row items-center justify-between text-xs">
               <span className="font-bold">Contacts</span>
               <span className="flex items-center justify-center bg-gray-300 text-black h-4 w-4 rounded-full">
@@ -114,8 +114,8 @@ export default function Chat() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center w-1/2 px-2 text-gray-800 py-2">
-          <div className="flex flex-col flex-grow w-full max-w-xl bg-gray-100 dark:bg-zinc-800 shadow-xl rounded-lg overflow-hidden">
+        <div className="flex flex-col items-center justify-center w-full px-10 text-gray-800 py-2">
+          <div className="flex flex-col flex-grow w-full bg-gray-100 dark:bg-zinc-800 shadow-xl rounded-lg overflow-hidden">
             <div
               id="chatContainer"
               className="flex flex-col flex-grow h-0 p-4 overflow-auto"
